@@ -1,0 +1,2 @@
+Il s'agit du concours Maic International 2022.C'est un concours dont le but est de réaliser un IA capable de jouer le Jeu de Morabaraba.
+Mon IA est été la première.Il se trouve dans le dossier MAIC20022-Morabarba-main
