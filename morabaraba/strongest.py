@@ -82,7 +82,7 @@ def STEAL(board,player,actions) :
     for action in actions:
         for piece in board.get_player_pieces_on_board(Color(player)):
             if is_making_mill(board,player, action.get_action_as_dict()['action']['at'])[0]:
-                if any([action.get_action_as_dict()['action']['at'] == move for move in get_effective_cell_moves(bord,piece)]):
+                if any([action.get_action_as_dict()['action']['at'] == move for move in get_effective_cell_moves(board,piece)]):
                     return action                        
             elif is_making_mill(board,player, action.get_action_as_dict()['action']['at'])[0]:
                 return action
@@ -306,4 +306,3 @@ class AI(MorabarabaPlayer):
     def play(self, state, remain_time):
         
         return play(state, self.position)
-

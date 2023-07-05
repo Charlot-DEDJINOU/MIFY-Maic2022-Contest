@@ -664,7 +664,7 @@ def Move(state,rules,actions,player_current,player) :
                 elif len(pity) != 0 :
                     return pity[0]
                 else :
-                    return action_choice[0]
+                    return actions_copie[0]
 
    else :
         for cell in board.get_all_empty_cells() :
