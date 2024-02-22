@@ -14,7 +14,7 @@ class AI(MorabarabaPlayer):
         self.position = color.value
 
     def play(self, state, remain_time): 
-        # try:
+        try:
             rules=MorabarabaRules(self.position)
             board=state.get_board()
             actions=rules.get_player_actions(state,self.position)
@@ -50,10 +50,10 @@ class AI(MorabarabaPlayer):
                 if action_choice != False :
                     return action_choice
                 return Make_occasion(rules,state,self.position,actions)
-        # except:
-        #     rules=MorabarabaRules(self.position)
-        #     actions=rules.get_player_actions(state,self.position)
-        #     return random.choice(actions)
+        except:
+            rules=MorabarabaRules(self.position)
+            actions=rules.get_player_actions(state,self.position)
+            return random.choice(actions)
 
 def is_making_mill(board,player,cell)  :   
     player_mills = []
